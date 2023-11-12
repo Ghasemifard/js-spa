@@ -1,0 +1,131 @@
+@import url("assets/styles/fonts.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "iranyekan";
+}
+
+/* variabels */
+:root{
+    --primaryColor: #6d28d9;
+    --secondaryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s ease-out;
+    --mainRed: #db2777;
+    --bodyColor: #f6f6f6;
+    --nav-width: 220px;
+}
+body{
+    font-family: "iranyekan";
+    color: var(--mainBlack);
+    background-color: var(--bodyColor);
+    direction: rtl;
+}
+.main-layout{
+    display: flex;
+}
+.nav{
+    height: 100vh;
+    width: var(--nav-width);
+    background-color: var(--mainWhite);
+    padding: .5rem;
+    position: sticky;
+    top: 0;
+    right: 0;
+    border-radius: 100px 0 0 0 ;
+    background: linear-gradient(180deg, #324467, #283142);
+    display: flex;
+    flex-direction: column;
+    transition: var(--mainTransition);
+}
+.nav__logo{
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 3rem;
+    font-weight: 800;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--mainWhite);
+    padding: 2rem 0;
+    text-align: center;
+    transition: var(--mainTransition);
+}
+.nav__items{
+    flex-grow: 1;
+    overflow: auto;
+}
+.nav__items::-webkit-scrollbar{
+    display: none;
+}
+.nav__item{
+    margin: 5px 0;
+}
+.nav li{
+    margin: 5px 0;
+}
+.nav__link{
+    text-decoration: none;
+    color: var(--mainWhite);
+    display: flex;
+    padding: 12px 8px;
+    transition: var(--mainTransition);
+}
+.nav__link:hover{
+    background-color: #ffffff7e;
+    color: #ffffff;
+    border-radius: 1.5rem;
+}
+.icon-container{
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: -1;
+}
+.sidebar-toggler{
+    z-index: unset;
+}
+.nav__item-label{
+    margin-right: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: hidden;
+    z-index: -1;
+}
+#app{
+    height: 200vh;
+    padding: 3rem 2rem 0 0;
+    flex-grow: 1;
+}
+.app-version{
+    color: #efefef;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* mini sidebar */
+.mini-sidebar.nav{
+    width: 60px;
+    overflow-x: hidden;
+}
+.mini-sidebar.nav .nav__link:hover{
+    background-color: transparent;
+    color: gold;
+}
+.mini-sidebar .nav__logo{
+    font-size: 1rem;
+}
+.mini-sidebar .app-version__label{
+    display: none;    
+}
+.sidebar-toggler{
+    transition: all .5s ease-out;
+}
+.nav.mini-sidebar .sidebar-toggler{
+    transform: rotate(180deg);
+}
