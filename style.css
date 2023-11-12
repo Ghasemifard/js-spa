@@ -96,7 +96,7 @@ body{
     z-index: -1;
 }
 #app{
-    height: 200vh;
+    height: 100vh;
     padding: 3rem 2rem 0 0;
     flex-grow: 1;
 }
